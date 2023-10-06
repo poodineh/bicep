@@ -1,7 +1,7 @@
-param webAppName1 string = 'ptwfdApp1'
-param webAppName2 string = 'ptwfdApp2'
-param location string = 'westeurope'
-param fdName string = 'ptwFrontDoor'
+param webAppName1 string 
+param webAppName2 string 
+param location string 
+param fdName string
 
 resource appPlan1 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: '${webAppName1}-plan'
