@@ -1,2 +1,4 @@
 # bicep
-Reference code base of the Medium articles.
+The reference code base of the Medium articles.
+
+https://medium.com/@poodineh
