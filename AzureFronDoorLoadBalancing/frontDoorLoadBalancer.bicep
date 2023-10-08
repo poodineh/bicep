@@ -35,7 +35,7 @@ resource webApplication2 'Microsoft.Web/sites@2021-01-15' = {
   }
 }
 
-resource resource 'Microsoft.Network/frontdoors@2020-05-01' = {
+resource frontDoor1 'Microsoft.Network/frontdoors@2020-05-01' = {
   name: fdName
   location: 'global'
   tags: {}
