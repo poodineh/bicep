@@ -11,8 +11,11 @@
       "frontDoorName": {
         "value": "poodifrontDoor"
       },
-      "location": {
+      "webApp1Location": {
         "value": "westeurope"
+      },
+      "webApp2Location": {
+        "value": "eastus"
       }
     }
 }

@@ -1,11 +1,12 @@
 param webAppName1 string 
 param webAppName2 string 
-param location string 
+param webApp1Location string
+param webApp2Location string
 param fdName string
 
 resource appPlan1 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: '${webAppName1}-plan'
-  location: location
+  location: webApp1Location
   sku: {
     name: 'F1'
   }
@@ -13,7 +14,7 @@ resource appPlan1 'Microsoft.Web/serverfarms@2022-09-01' = {
 
 resource webApplication1 'Microsoft.Web/sites@2021-01-15' = {
   name: webAppName1
-  location: location
+  location: webApp1Location
   properties: {
     serverFarmId: appPlan1.id
   }
@@ -21,7 +22,7 @@ resource webApplication1 'Microsoft.Web/sites@2021-01-15' = {
 
 resource appPlan2 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: '${webAppName2}-plan'
-  location: location
+  location: webApp2Location
   sku: {
     name: 'F1'
   }
@@ -29,7 +30,7 @@ resource appPlan2 'Microsoft.Web/serverfarms@2022-09-01' = {
 
 resource webApplication2 'Microsoft.Web/sites@2021-01-15' = {
   name: webAppName2
-  location: location
+  location: webApp2Location
   properties: {
     serverFarmId: appPlan2.id
   }
@@ -143,3 +144,7 @@ resource frontDoor1 'Microsoft.Network/frontdoors@2020-05-01' = {
     }
   }
 }
+
+output frontDoorHost string = frontDoor1.properties.frontendEndpoints[0].properties.hostName
+output app1Host string = webApplication1.properties.hostNames[0]
+output app2Host string = webApplication2.properties.hostNames[0]
