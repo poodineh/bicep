@@ -11,14 +11,12 @@ We want to implement a Multi-geo redundancy including two web applications on Az
 
 Base on the scenario requirements, we should take a load balancer from the table below.
 
-=================================================
 | A
-=================================================
+
 | B
-=================================================
+
 | C
-=================================================
+
 | D
-=================================================
+
 | E
-=================================================
