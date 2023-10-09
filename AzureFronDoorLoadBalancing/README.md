@@ -11,12 +11,9 @@ We want to implement a Multi-geo redundancy including two web applications on Az
 
 Base on the scenario requirements, we should take a load balancer from the table below.
 
-| A
-
-| B
-
-| C
-
-| D
-
-| E
+| Service                       | Region              | Traffic
+____________________________________________________________________
+| Azure Front Door              | Global              | HTTP(S)
+| Azure Traffic Manager         | Global              | Non-HTTP(S)
+| Azure Application Gateway     | Regional            | HTTP(S)
+| Azure Load Balancer           | Global/Regional     | Non-HTTP(S)
