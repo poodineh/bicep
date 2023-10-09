@@ -9,15 +9,7 @@ https://medium.com/@poodineh
 Scenario
 We want to implement a Multi-geo redundancy including two web applications on Azure web App Service on diffrent locations(West Europe and East US), and a global load balancer supporting HTTP2 and HTTPS.
 
-Base on the scenario requirements, we should take a load balancer from the table below.
-
-| Service                       | Region              | Traffic
-____________________________________________________________________
-| Azure Front Door              | Global              | HTTP(S)
-| Azure Traffic Manager         | Global              | Non-HTTP(S)
-| Azure Application Gateway     | Regional            | HTTP(S)
-| Azure Load Balancer           | Global/Regional     | Non-HTTP(S)
-
+Base on the scenario requirements, we should take an Azure Front Door load balancer.
 
 Solution
 
@@ -34,6 +26,6 @@ This Bicep template creates the following resources:
 How to configure the Bicep template:
 Download/Clone the code base from GitHub to the desired local directory.
 Open the parameters.json file and change the values as desired. Do not forget to save the changes.
-<Code snippets>
+
 
 
