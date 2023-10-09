@@ -17,3 +17,23 @@ ____________________________________________________________________
 | Azure Traffic Manager         | Global              | Non-HTTP(S)
 | Azure Application Gateway     | Regional            | HTTP(S)
 | Azure Load Balancer           | Global/Regional     | Non-HTTP(S)
+
+
+Solution
+
+This Bicep template includes the following files:
+* main.bicep
+* frontDoorLoadBalancer.bicep
+* parameters.json
+
+This Bicep template creates the following resources:
+* Two App Service Plans
+* Two Web App Services
+* A Azure Front Door
+
+How to configure the Bicep template:
+Download/Clone the code base from GitHub to the desired local directory.
+Open the parameters.json file and change the values as desired. Do not forget to save the changes.
+<Code snippets>
+
+
