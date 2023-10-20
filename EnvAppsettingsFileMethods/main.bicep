@@ -56,7 +56,6 @@ resource webApplication1 'Microsoft.Web/sites@2022-09-01' = {
   }
 }
 
-
 module appSettings 'webappConfig.bicep' = {
   name: 'myAwesomeFunction-appSettings'
   params: {
@@ -71,6 +70,3 @@ module appSettings 'webappConfig.bicep' = {
   ]
 }
 
-// output frontDoorHost string = frontDoor.outputs.frontDoorHost
-// output app1Host string = frontDoor.outputs.app1Host
-// output app2Host string = frontDoor.outputs.app2Host
